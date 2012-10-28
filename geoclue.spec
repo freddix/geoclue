@@ -19,6 +19,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel
 BuildRequires:	docbook-dtd412-xml
+BuildRequires:	glib-gio-gsettings
 BuildRequires:	gtk+-devel
 BuildRequires:	libsoup-devel
 BuildRequires:	libtool
@@ -83,10 +84,11 @@ A gypsy provider for geoclue.
 %{__autoheader}
 %{__automake}
 %configure \
-	--disable-silent-rules	\
-	--disable-static	\
-	--enable-conic=no	\
-	--enable-gpsd=no	\
+	--disable-schemas-compile	\
+	--disable-silent-rules		\
+	--disable-static		\
+	--enable-conic=no		\
+	--enable-gpsd=no		\
 	--with-html-dir=%{_gtkdocdir}
 %{__make}
 
